@@ -6,6 +6,13 @@ var mongoose = require('mongoose')
 
 var COUNT = 5000; //number of blocks to index
 
+function maskips (splitaddy) {
+  var ip = splitaddy;
+  var breakip = ip.split('.');
+  var masked = breakip[0] + '.' + breakip[1] + '.' + 'XXX' + '.' + 'XXX';
+  return masked;
+}
+
 function exit() {
   mongoose.disconnect();
   process.exit(0);
@@ -34,7 +41,7 @@ mongoose.connect(dbString, function(err) {
           } else {
             request({uri: 'http://freegeoip.net/json/' + address, json: true}, function (error, response, geo) {
               db.create_peer({
-                address: address,
+                address: maskips(address),
                 protocol: body[i].version,
                 version: body[i].subver.replace('/', '').replace('/', ''),
                 country: geo.country_name
