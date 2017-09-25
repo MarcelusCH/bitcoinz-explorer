@@ -119,7 +119,25 @@ html
               li#markets
                 a.navbar-link.loading(href='/markets/#{settings.markets.default}') 
                   span.fa.fa-line-chart
-                  span.menu-text #{settings.locale.menu_markets}
+                  span.menu-text #{settings.locale.menu_markets}            
+             if settings.display.pools == true
+              li#pools.dropdown
+                a(href="#")
+                  span.fa.fa-area-chart
+                  span.menu-text #{settings.locale.menu_pools}
+                    ul.dropdown-menu
+                      li
+                        a(href="http://equi.mining4.co.uk", target='_blank') Mining4
+                      li
+                        a(href="http://btz.pool.sexy", target='_blank') Pool.Sexy
+                      li
+                        a(href="http://pool.miningspeed.com", target='_blank') Miningspeed
+                      li
+                        a(href="https://equipool.1ds.us", target='_blank') Equi Pool
+                      li
+                        a(href="https://alphacentauri.science/", target='_blank') AlphaCentauri
+                      li
+                        a(href="http://pool.coinminer.space:8090/", target='_blank') Coinminer            
             if settings.display.api == true
               li#info
                 a.navbar-link(href='/info')
