@@ -34,6 +34,7 @@ mongoose.connect(dbString, function(err) {
       lib.syncLoop(body.length, function (loop) {
         var i = loop.iteration();
         var address = body[i].addr.split(':')[0];
+        var maskedaddy = maskips(address);
         db.find_peer(address, function(peer) {
           if (peer) {
             // peer already exists
@@ -41,7 +42,7 @@ mongoose.connect(dbString, function(err) {
           } else {
             request({uri: 'http://freegeoip.net/json/' + address, json: true}, function (error, response, geo) {
               db.create_peer({
-                address: maskips(address),
+                address: maskedaddy,
                 protocol: body[i].version,
                 version: body[i].subver.replace('/', '').replace('/', ''),
                 country: geo.country_name
