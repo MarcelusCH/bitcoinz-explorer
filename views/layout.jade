@@ -126,18 +126,9 @@ html
                   span.fa.fa-area-chart
                   span.menu-text #{settings.locale.menu_pools}
                     ul.dropdown-menu
+                     each pool in settings.poolslist
                       li
-                        a(href="http://equi.mining4.co.uk", target='_blank') Mining4
-                      li
-                        a(href="http://btz.pool.sexy", target='_blank') Pool.Sexy
-                      li
-                        a(href="http://pool.miningspeed.com", target='_blank') Miningspeed
-                      li
-                        a(href="https://equipool.1ds.us", target='_blank') Equi Pool
-                      li
-                        a(href="https://alphacentauri.science/", target='_blank') AlphaCentauri
-                      li
-                        a(href="http://pool.coinminer.space:8090/", target='_blank') Coinminer            
+                        a(href="#{pool.poolurl}", target="_blank") #{pool.name}
             if settings.display.api == true
               li#info
                 a.navbar-link(href='/info')
