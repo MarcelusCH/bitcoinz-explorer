@@ -1,24 +1,26 @@
-Iquidus Explorer - 1.6.1
+BitcoinZ Explorer 1.0.1 (Based on Iquidus Explorer - 1.6.1)
 ================
 
 An open source block explorer written in node.js.
 
 ### See it in action
 
-*  [Jumbucks](http://explorer.getjumbucks.com)
-*  [Sphere](http://sphere.iquidus.io)
-*  [SAR](http://explorer.sarcoin.info)
-*  [Vanillacoin](https://blockchain.vanillacoin.net/)
-*  [Neoscoin](http://explorer.infernopool.com/)  
-*  [C2Chain](http://c2chain.info/)
+*  [BitcoinZ](https://btczexplorer.blockhub.info)
 
 *note: If you would like your instance mentioned here contact me*
+
+### New Features in BitcoinZ Explorer
+
+*   Added Mining Pool Menu
+*   Added Numeric formats in stats header
+*   Added Market Cap in main layout
+*   Added Mask IPs function for 'Network' layout (A.B.XXX.XXX)
 
 ### Requires
 
 *  node.js >= 0.10.28
 *  mongodb 2.6.x
-*  *coind
+*  *zcashd (bitcoinzd)
 
 ### Create database
 
@@ -40,7 +42,7 @@ Create user with read/write access:
 
 ### Get the source
 
-    git clone https://github.com/iquidus/explorer explorer
+    git clone https://github.com/cryptorex/bitcoinz-explorer
 
 ### Install node modules
 
@@ -106,8 +108,8 @@ Iquidus Explorer is intended to be generic so it can be used with any wallet fol
 
 ### Donate
 
-    BTC: 168hdKA3fkccPtkxnX8hBrsxNubvk4udJi
-    JBS: JZp9893FMmrm1681bDuJBU7c6w11kyEY7D
+    BTC: 1MTdvZFPKPixYt8FFqMWHHATGcLtrWcQXp
+
 
 ### Known Issues
 
