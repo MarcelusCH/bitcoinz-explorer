@@ -1,4 +1,4 @@
-BitcoinZ Explorer 1.0.1 (Based on Iquidus Explorer - 1.6.1)
+BitcoinZ Explorer 1.0.2 (Based on Iquidus Explorer - 1.6.1)
 ================
 
 An open source block explorer written in node.js.
@@ -15,6 +15,7 @@ An open source block explorer written in node.js.
 *   Added Numeric formats in stats header
 *   Added Market Cap in main layout
 *   Added Mask IPs function for 'Network' layout (A.B.XXX.XXX)
+*   Added graphical node Network map on 'Network' tab
 
 ### Requires
 
